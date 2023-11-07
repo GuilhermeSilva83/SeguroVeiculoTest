@@ -18,7 +18,7 @@ namespace SeguroVeiculo.WebApi.Tests
 
 
         [Fact]
-        public async Task PostTest()
+        public async Task CotarSeguro()
         {
             var response = await httpClient.PostAsJsonAsync($"/api/seguro/cotar",
                  new AdicionarSeguroDto
