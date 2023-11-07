@@ -14,8 +14,6 @@ namespace SeguroVeiculo.Domain.Aggs.SeguroAgg
     public class Seguro : Int32Entity
     {
         public decimal Valor { get; set; }
-        public DateTime InicioVigencia { get; set; }
-        public DateTime FimVigencia { get; set; }
 
         [ForeignKey(nameof(SeguradoId))]
         public int SeguradoId { get; set; }
