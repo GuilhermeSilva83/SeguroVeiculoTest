@@ -45,9 +45,14 @@ namespace SeguroVeiculo.Seedwork.Repository
             }
         }
 
+        protected virtual IQueryable<TEntity> Include(IQueryable<TEntity> set)
+        {
+            return set;
+        }
+
         public virtual async Task<TEntity> GetByIdAsync(TId id)
         {
-            return await (from e in GetSet()
+            return await Include(from e in GetSet()
                           where e.Id.Equals(id)
                           select e)
                           .FirstOrDefaultAsync();
