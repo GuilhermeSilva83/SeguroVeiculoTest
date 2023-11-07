@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeguroVeiculo.CrossCutting"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeguroVeiculo.WebApi.Tests", "SeguroVeiculo.WebApi.Tests\SeguroVeiculo.WebApi.Tests.csproj", "{841AD4B5-CE58-4E05-9838-490CE65498E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeguroVeiculo.Domain.Tests", "SeguroVeiculo.Domain.Tests\SeguroVeiculo.Domain.Tests.csproj", "{0CB39D4C-018C-4CCD-A2C0-CA434340CFAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{841AD4B5-CE58-4E05-9838-490CE65498E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{841AD4B5-CE58-4E05-9838-490CE65498E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{841AD4B5-CE58-4E05-9838-490CE65498E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CB39D4C-018C-4CCD-A2C0-CA434340CFAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CB39D4C-018C-4CCD-A2C0-CA434340CFAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CB39D4C-018C-4CCD-A2C0-CA434340CFAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CB39D4C-018C-4CCD-A2C0-CA434340CFAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

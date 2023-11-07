@@ -57,7 +57,7 @@ void ConfigServices(IServiceCollection services, IConfigurationRoot configuratio
     services.AddScoped<ISeguradoRepository, SeguradoRepository>();
     services.AddScoped<IVeiculoRepository, VeiculoRepository>();
 
-    services.AddSingleton<ICalculoValorSeguro, CalculoValorSeguro>();
+    services.AddSingleton<ICalculoValorSeguroService, CalculoValorSeguroService>();
 
 
     services.AddDbContext<IUnitOfWork, MainContextUnitOfWork>(o =>

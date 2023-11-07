@@ -21,9 +21,9 @@ namespace SeguroVeiculo.WebApi.Controllers
     [ApiController]
     public class SeguroController : Int32CrudController<ISeguroRepository, Seguro, AdicionarSeguroDto>
     {
-        private readonly ICalculoValorSeguro calculoValorSeguro;
+        private readonly ICalculoValorSeguroService calculoValorSeguro;
 
-        public SeguroController(IUnitOfWork uow, ISeguroRepository rep, IMapper mapper, ICalculoValorSeguro calculoValorSeguro) : base(uow, rep, mapper)
+        public SeguroController(IUnitOfWork uow, ISeguroRepository rep, IMapper mapper, ICalculoValorSeguroService calculoValorSeguro) : base(uow, rep, mapper)
         {
             this.calculoValorSeguro = calculoValorSeguro;
         }

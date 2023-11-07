@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace SeguroVeiculo.Domain.Services
 {
-    public class CalculoValorSeguro : ICalculoValorSeguro
+    public class CalculoValorSeguroService : ICalculoValorSeguroService
     {
-        public const decimal MergemSeguranca = 3;
-        public const decimal Lucro = 5;
+        public const decimal MergemSeguranca = 1.03m;
+        public const decimal Lucro = 1.05m;
 
         public ResultadoCalculo CalcularSeguro(decimal valorVeiculo)
         {
 
             var taxaRisco = (valorVeiculo * 5) / (2 * valorVeiculo);
-            var premioRisco = taxaRisco * valorVeiculo;
-            var premioPuro = premioRisco * (1 + CalculoValorSeguro.MergemSeguranca);
+            var premioRisco = (taxaRisco / 100) * valorVeiculo;
+            var premioPuro = premioRisco * MergemSeguranca;
             var premioComercial = Lucro * premioPuro; // Valor do Seguro
 
 
@@ -27,7 +27,7 @@ namespace SeguroVeiculo.Domain.Services
                 TaxaRisco = taxaRisco,
                 PremioRisco = premioRisco,
                 PremioPuro = premioPuro,
-                PremioComercial = premioComercial
+                PremioComercial = Math.Round(premioComercial, 2, MidpointRounding.ToZero)
             };
         }
     }

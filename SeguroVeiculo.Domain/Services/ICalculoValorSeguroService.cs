@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SeguroVeiculo.Domain.Services
 {
-    public interface ICalculoValorSeguro
+    public interface ICalculoValorSeguroService
     {
         ResultadoCalculo CalcularSeguro(decimal valorVeiculo);
     }
