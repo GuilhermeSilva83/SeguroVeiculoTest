@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SeguroVeiculo.Infra.Repository;
 
@@ -11,9 +12,11 @@ using SeguroVeiculo.Infra.Repository;
 namespace SeguroVeiculo.WebApi.Migrations
 {
     [DbContext(typeof(MainContextUnitOfWork))]
-    partial class MainContextUnitOfWorkModelSnapshot : ModelSnapshot
+    [Migration("20231107082411_v0.3")]
+    partial class v03
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

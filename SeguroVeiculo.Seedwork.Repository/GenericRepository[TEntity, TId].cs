@@ -35,10 +35,12 @@ namespace SeguroVeiculo.Seedwork.Repository
         {
             if (entity.IsTransient())
             {
+                entity.CreateDate = DateTime.Now;
                 GetSet().Add(entity);
             }
             else
             {
+                entity.UpdateDate = DateTime.Now;
                 GetSet().Update(entity);
             }
         }
