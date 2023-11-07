@@ -5,21 +5,19 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeguroVeiculo.Domain", "SeguroVeiculo.Domain\SeguroVeiculo.Domain.csproj", "{22F84E89-F914-4ABB-A4E0-3CCA3139A00C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeguroVeiculo.Infra.Repository", "SeguroVeiculo.Infra.Repository\SeguroVeiculo.Infra.Repository.csproj", "{0198E4C1-4782-469B-B8B3-5A40A4C5C3F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeguroVeiculo.Infra.Repository", "SeguroVeiculo.Infra.Repository\SeguroVeiculo.Infra.Repository.csproj", "{0198E4C1-4782-469B-B8B3-5A40A4C5C3F5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeguroVeiculo.Seedwork.Domain", "SeguroVeiculo.Seedwork.Domain\SeguroVeiculo.Seedwork.Domain.csproj", "{7B1629C4-55FB-4D63-8866-3C495BD5FEE1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Seedwork", "Seedwork", "{F840C732-312C-45C4-8D10-FF39BE26B9CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeguroVeiculo.Seedwork.Repository", "SeguroVeiculo.Seedwork.Repository\SeguroVeiculo.Seedwork.Repository.csproj", "{1D8F9818-D115-462B-9B32-DF0274F5DFD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeguroVeiculo.Seedwork.Repository", "SeguroVeiculo.Seedwork.Repository\SeguroVeiculo.Seedwork.Repository.csproj", "{1D8F9818-D115-462B-9B32-DF0274F5DFD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeguroVeiculo.WebApi", "SeguroVeiculo.WebApi\SeguroVeiculo.WebApi.csproj", "{C134F9AF-6A00-4693-83CB-4FC991E0EF5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeguroVeiculo.WebApi", "SeguroVeiculo.WebApi\SeguroVeiculo.WebApi.csproj", "{C134F9AF-6A00-4693-83CB-4FC991E0EF5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeguroVeiculo.CrossCutting", "SeguroVeiculo.CrossCutting\SeguroVeiculo.CrossCutting.csproj", "{F09F7B63-20A1-4288-AC63-BC5ED27E389A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeguroVeiculo.CrossCutting", "SeguroVeiculo.CrossCutting\SeguroVeiculo.CrossCutting.csproj", "{F09F7B63-20A1-4288-AC63-BC5ED27E389A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeguroVeiculo.Api", "SeguroVeiculo.Api\SeguroVeiculo.Api.csproj", "{AEC0FFFD-E382-4589-938B-6F3B1428C659}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeguroVeiculo.WebApi.Tests", "SeguroVeiculo.WebApi.Tests\SeguroVeiculo.WebApi.Tests.csproj", "{841AD4B5-CE58-4E05-9838-490CE65498E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeguroVeiculo.WebApi.Tests", "SeguroVeiculo.WebApi.Tests\SeguroVeiculo.WebApi.Tests.csproj", "{841AD4B5-CE58-4E05-9838-490CE65498E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,10 +49,6 @@ Global
 		{F09F7B63-20A1-4288-AC63-BC5ED27E389A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F09F7B63-20A1-4288-AC63-BC5ED27E389A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F09F7B63-20A1-4288-AC63-BC5ED27E389A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AEC0FFFD-E382-4589-938B-6F3B1428C659}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AEC0FFFD-E382-4589-938B-6F3B1428C659}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AEC0FFFD-E382-4589-938B-6F3B1428C659}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AEC0FFFD-E382-4589-938B-6F3B1428C659}.Release|Any CPU.Build.0 = Release|Any CPU
 		{841AD4B5-CE58-4E05-9838-490CE65498E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{841AD4B5-CE58-4E05-9838-490CE65498E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{841AD4B5-CE58-4E05-9838-490CE65498E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
