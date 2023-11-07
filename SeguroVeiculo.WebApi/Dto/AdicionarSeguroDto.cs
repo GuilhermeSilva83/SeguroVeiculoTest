@@ -18,6 +18,6 @@ namespace SeguroVeiculo.WebApi.Dto
         public string Marca { get; set; }
         public string Modelo { get; set; }
         public string Placa { get; set; }
-        public decimal Valor { get; internal set; }
+        public decimal Valor { get; set; }
     }
 }

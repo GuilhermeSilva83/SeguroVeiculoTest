@@ -3,6 +3,7 @@ using System.Net.Http.Json;
 using System.Net;
 using Microsoft.AspNetCore.Mvc.Testing;
 using SeguroVeiculo.WebApi.Dto;
+using System.Diagnostics;
 
 namespace SeguroVeiculo.WebApi.Tests
 {
@@ -22,12 +23,22 @@ namespace SeguroVeiculo.WebApi.Tests
             var response = await httpClient.PostAsJsonAsync($"/api/seguro/cotar",
                  new AdicionarSeguroDto
                  {
+                     Nome = "Guilherme Silva",
                      CPF = "00322421152",
                      DataNascimento = new DateTime(1983, 11, 25),
+                     Marca = "BMW",
+                     Modelo = "X1",
+                     Valor = 90000,
+                     Placa = "ABC-010203",
                      
                  });
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+
+            if (response.StatusCode !=  HttpStatusCode.OK)
+            {
+                Debug.WriteLine(response.Content.ToString());
+            }
         }
     }
 }

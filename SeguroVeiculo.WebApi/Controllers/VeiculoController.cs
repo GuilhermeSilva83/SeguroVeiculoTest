@@ -15,9 +15,9 @@ namespace SeguroVeiculo.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class VeiculoController : Int32CrudController<VeiculoRepository, Veiculo, VeiculoDto>
+    public class VeiculoController : Int32CrudController<IVeiculoRepository, Veiculo, VeiculoDto>
     {
-        public VeiculoController(IUnitOfWork uow, VeiculoRepository rep, IMapper mapper) : base(uow, rep, mapper)
+        public VeiculoController(IUnitOfWork uow, IVeiculoRepository rep, IMapper mapper) : base(uow, rep, mapper)
         {
         }
     }

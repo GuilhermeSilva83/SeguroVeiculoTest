@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using SeguroVeiculo.Domain.Aggs.SeguradoAgg;
 using SeguroVeiculo.Domain.Aggs.SeguroAgg;
 using SeguroVeiculo.Domain.Aggs.VeiculoAgg;
+using SeguroVeiculo.Domain.Services;
 using SeguroVeiculo.Infra.Repository;
 using SeguroVeiculo.Seedwork.Domain;
 using SeguroVeiculo.WebApi.Map;
@@ -56,10 +57,10 @@ void ConfigServices(IServiceCollection services, IConfigurationRoot configuratio
     services.AddScoped<ISeguradoRepository, SeguradoRepository>();
     services.AddScoped<IVeiculoRepository, VeiculoRepository>();
 
-    services.AddScoped<IUnitOfWork, MainContextUnitOfWork>();
+    services.AddSingleton<ICalculoValorSeguro, CalculoValorSeguro>();
 
 
-    services.AddDbContext<MainContextUnitOfWork>(o =>
+    services.AddDbContext<IUnitOfWork, MainContextUnitOfWork>(o =>
     {
         var opt = o.UseSqlServer(configuration.GetConnectionString("Default"), opt =>
         {

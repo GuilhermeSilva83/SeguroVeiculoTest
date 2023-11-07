@@ -15,11 +15,11 @@ namespace SeguroVeiculo.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SeguroController : Int32CrudController<SeguroRepository, Seguro, AdicionarSeguroDto>
+    public class SeguroController : Int32CrudController<ISeguroRepository, Seguro, AdicionarSeguroDto>
     {
         private readonly ICalculoValorSeguro calculoValorSeguro;
 
-        public SeguroController(IUnitOfWork uow, SeguroRepository rep, IMapper mapper, ICalculoValorSeguro calculoValorSeguro) : base(uow, rep, mapper)
+        public SeguroController(IUnitOfWork uow, ISeguroRepository rep, IMapper mapper, ICalculoValorSeguro calculoValorSeguro) : base(uow, rep, mapper)
         {
             this.calculoValorSeguro = calculoValorSeguro;
         }

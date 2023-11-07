@@ -13,31 +13,27 @@ namespace SeguroVeiculo.WebApi.Map
     {
         public DtoToEntityProfile()
         {
-            CreateMap<AdicionarSeguroDto, Seguro>().ConvertUsing(new AdicionarSeguroDtoParaSeguro());
-        }
-    }
+            //CreateMap<AdicionarSeguroDto, Seguro>().ConvertUsing( new AdicionarSeguroDtoParaSeguro());
 
-
-    public class AdicionarSeguroDtoParaSeguro : ITypeConverter<AdicionarSeguroDto, Seguro>
-    {
-        public Seguro Convert(AdicionarSeguroDto source, Seguro destination, ResolutionContext context)
-        {
-            return new Seguro()
+            CreateMap<AdicionarSeguroDto, Seguro>().ConvertUsing((source, seguro) =>
             {
-                Segurado = new Segurado()
+                seguro = new Seguro();
+                seguro.Segurado = new Segurado()
                 {
                     CPF = source.CPF,
                     DataNascimento = source.DataNascimento,
                     Nome = source.Nome
-                },
-                Veiculo = new Veiculo()
+                };
+                seguro.Veiculo = new Veiculo()
                 {
                     Marca = source.Marca,
                     Modelo = source.Modelo,
                     Placa = source.Placa,
                     Valor = source.Valor
-                }
-            };
+                };
+
+                return seguro;
+            });
         }
     }
 }
